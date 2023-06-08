@@ -5,11 +5,8 @@ if __name__ == "__main__":
     i = 1
     if len_argv == 0:
         print("{} arguments.".format(len_argv))
-    elif len_argv == 1:
-        print("{}: argument:".format(len_argv))
-        print("1: {}".format(sys.argv[1]))
     else:
-        print("{} arguments:".format(len_argv))
-        for arg in sys.argv[1:]:
-            print("{}: {}".format(i, arg))
+        print("{} argument{}:".format(len_argv, "" if len_argv == 1 else "s"))
+        for av in sys.argv[1:]:
+            print("{}: {}".format(i, av))
             i += 1
