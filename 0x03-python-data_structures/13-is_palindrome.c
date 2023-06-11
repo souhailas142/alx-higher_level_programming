@@ -16,13 +16,7 @@ listint_t *reverse_listint(listint_t *head)
 
 		if (!new_node)
 		{
-			while (new_list)
-			{
-				listint_t *temp = new_list;
-
-				new_list = new_list->next;
-				free(temp);
-			}
+			free_listint(new_list);
 			return (NULL);
 		}
 		new_node->n = current->n;
@@ -45,13 +39,13 @@ int is_palindrome(listint_t **head)
 	{
 		if ((*head)->n != lst_rev->n)
 		{
-			free(lst_rev);
+			free_listint(lst_rev);
 			return (0);
 		}
 		(*head) = (*head)->next;
 		lst_rev = lst_rev->next;
 	}
-	free(lst_rev);
+	free_listint(lst_rev);
 	return (1);
 }
 
