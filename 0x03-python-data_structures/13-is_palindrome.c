@@ -13,13 +13,12 @@ listint_t *reverse_listint(listint_t *head)
 	while (current)
 	{
 		listint_t *new_node = malloc(sizeof(listint_t));
+
 		if (!new_node)
 			return (NULL);
-		
 		new_node->n = current->n;
 		new_node->next = new_list;
 		new_list = new_node;
-
 		current = current->next;
 	}
 	return (new_list);
@@ -31,14 +30,13 @@ listint_t *reverse_listint(listint_t *head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp = *head;
-	listint_t *lst_rev = reverse_listint(tmp);
+	listint_t *lst_rev = reverse_listint(*head);
 
-	while (tmp && lst_rev)
+	while ((*head) && lst_rev)
 	{
-		if (tmp->n != lst_rev->n)
+		if ((*head)->n != lst_rev->n)
 			return (0);
-		tmp = tmp->next;
+		(*head) = (*head)->next;
 		lst_rev = lst_rev->next;
 	}
 	return (1);
