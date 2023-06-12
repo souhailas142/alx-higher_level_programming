@@ -17,6 +17,7 @@ listint_t *reverse_listint(listint_t *head)
 		if (!new_node)
 		{
 			free_listint(new_list);
+			free_listint((listint_t *)head);
 			return (NULL);
 		}
 		new_node->n = current->n;
