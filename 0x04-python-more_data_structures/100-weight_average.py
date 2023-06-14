@@ -8,5 +8,5 @@ def weight_average(my_list=[]):
             summ += mul
             div += couple[1]
         return (summ / div)
-    else: 
+    else:
         return (0)
