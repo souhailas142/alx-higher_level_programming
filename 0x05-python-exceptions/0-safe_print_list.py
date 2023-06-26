@@ -9,14 +9,14 @@ def safe_print_list(my_list=[], x=0):
             return (c)
         if x >= len_lst:
             for item in my_list:
-                print("{:d}".format(item), end="")
+                print("{}".format(item), end="")
             print()
             return (len_lst)
         else:
             for index, item in enumerate(my_list):
                 if index == x:
                     break
-                print("{:d}".format(item), end="")
+                print("{}".format(item), end="")
                 c += 1
             print()
             return (c)
