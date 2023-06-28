@@ -3,6 +3,7 @@
 No module imported
 """
 
+
 class Square:
     """Class Square"""
 
