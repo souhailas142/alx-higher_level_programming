@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+No module imported
+"""
+
 class Square:
     """Square class"""
 
